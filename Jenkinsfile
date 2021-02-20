@@ -49,7 +49,7 @@ pipeline {
 
       steps {
         writeFile file: 'anchore_images', text: 'docker.io/rsthakur83/spring-boot-demo'
-        anchore name: 'anchore_images', bailOnFail: false
+        anchore name: 'anchore_images', bailOnFail: false,  engineRetries: '300'
       }
     }
 		
